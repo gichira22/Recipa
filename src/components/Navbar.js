@@ -1,50 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../Style.css";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center gap-5">
-      <Link
-        to="/"
-        className="bg-transparent  py-1 px-2 transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300"
-      >
+    <div className="navbar-container">
+      <Link to="/" className="navbar-link">
         Home
       </Link>
-
-      <Link
-        to="/about"
-        className="bg-transparent  py-1 px-2 transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300"
-      >
+      <Link to="/about" className="navbar-link">
         About Us
       </Link>
-      <Link
-        to="/recipe"
-        className="bg-transparent  py-1 px-2 transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300"
-      >
+      <Link to="/recipe" className="navbar-link">
         Recipes
       </Link>
-      <Link
-        to="/contact"
-        className="bg-transparent  py-1 px-2 transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300"
-      >
+      <Link to="/contact" className="navbar-link">
         Contacts
       </Link>
-      <Link
-        to="/login"
-        className="bg-blue-400  hover:bg-blue-300/90 py-1 px-2 transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300"
-      >
+      <Link to="/login" className="navbar-link navbar-link-blue">
         Login
       </Link>
-      <Link
-        to="/signup"
-        className="bg-blue-400  hover:bg-blue-300/90 py-1 px-2 transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300"
-      >
+      <Link to="/signup" className="navbar-link navbar-link-blue">
         Sign Up
       </Link>
-      <Link
-        to="/feedback"
-        className="bg-transparent   py-1 px-2 transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300"
-      >
+      <Link to="/feedback" className="navbar-link">
         Feedback
       </Link>
     </div>

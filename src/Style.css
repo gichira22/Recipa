@@ -139,3 +139,29 @@ body {
   color: white;
   font-size: 900;
 }
+.navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.navbar-link {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  transition: transform 0.3s ease-in-out, scale 0.3s ease-in-out;
+}
+
+.navbar-link:hover {
+  transform: translateY(-1px);
+  scale: 1.1;
+}
+
+.navbar-link-blue {
+  background-color: #4299e1;
+  color: #fff;
+}
+
+.navbar-link-blue:hover {
+  background-color: #3182ce;
+}
