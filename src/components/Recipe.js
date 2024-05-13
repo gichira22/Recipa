@@ -16,10 +16,10 @@ const Recipe = () => {
   return (
     <div className="main">
       <div className="heading">
-        <h1>Find Your Favourite Recipes Here</h1>
+        <h1>Welcome to RECIPE-FINDER!</h1>
         <h4>
-          Welcome to our page. We provide you with a variety of recipes from
-          different locations.
+          Welcome to our recipe finder application! Whether you're looking for a
+          quick meal idea or planning a gourmet dinner, we've got you covered.
         </h4>
       </div>
       <div className="searchButton">
@@ -34,7 +34,11 @@ const Recipe = () => {
       </div>
       <div className="container">
         {myRecipe.length === 0 ? (
-          <p className="notFound">Recipe Not Found</p>
+          <p className="notFound">
+            {" "}
+            Use our search bar to discover a world of delicious recipes and
+            culinary inspiration. Happy cooking!
+          </p>
         ) : (
           myRecipe.map((res, index) => {
             return <RecipeList key={index} data={res} />;
