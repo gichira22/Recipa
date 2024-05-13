@@ -45,6 +45,9 @@ Git & GitHub (for version control and collaboration)
 **Responsive Design**: Ensuring the platform looks good and functions well across different screen sizes and devices required careful styling and testing. This was addressed by using CSS media queries and responsive design principles.
 **Search Functionality**: Implementing an efficient search feature that provides relevant results posed a challenge. The solution involved optimizing the search algorithm and leveraging API capabilities for filtering data.
 **Shopping List Integration**: Integrating the shopping list feature required managing state across multiple components and syncing data with user accounts. This was achieved using React's context API and local storage for persistence.
+**NPM Dependency Management**: Managing npm dependencies can be challenging due to version conflicts, security vulnerabilities, or package installation failures. To address these issues, we adopted several solutions:
+***Dependency Locking***: Utilizing npm's built-in support for package-lock.json or yarn's yarn.lock to lock down dependencies and ensure consistent installations across different environments.
+***Dependency Auditing***: Regularly auditing dependencies using npm audit or similar tools to identify and fix security vulnerabilities in dependencies. 
 
 ## Future Plans
 
