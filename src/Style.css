@@ -1,11 +1,31 @@
-* {
+/* * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(34, 31, 27);
+} */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #333;
+}
+
+.heading h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding-top: 2rem;
+  text-align: center;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.7);
+}
+
 .heading h1 {
   color: white;
   font-size: 48px;
@@ -87,7 +107,7 @@ body {
   width: 100%;
   background: linear-gradient(
     to bottom,
-    rgb(204, 255, 51, 0.7),
+    rgba(204, 255, 51, 0.793),
     rgb(204, 255, 51, 0.9)
   );
   transition: 0.2s All;
@@ -148,7 +168,7 @@ body {
 
 .navbar-link {
   padding: 0.5rem 1rem;
-  background-color: transparent;
+  background-color: bisque;
   transition: transform 0.3s ease-in-out, scale 0.3s ease-in-out;
 }
 
@@ -164,4 +184,66 @@ body {
 
 .navbar-link-blue:hover {
   background-color: #3182ce;
+}
+/* Assuming your root container is a flex container */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
 }

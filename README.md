@@ -55,7 +55,7 @@ Git & GitHub (for version control and collaboration)
 
 ## Live Link
 
-    The project was deployed in Vercel and the live link is
+    The project was deployed in Vercel and the live link is https://recipa-one.vercel.app/
 
 ## Requirements
 
