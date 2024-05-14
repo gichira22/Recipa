@@ -185,7 +185,7 @@ body {
 .navbar-link-blue:hover {
   background-color: #3182ce;
 }
-/* Assuming your root container is a flex container */
+
 html,
 body,
 #root {
@@ -196,7 +196,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+/* Style Footer component */
 .footer {
   background-color: #333;
   color: #fff;
@@ -246,4 +246,22 @@ body {
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
+}
+/* Styling Home component*/
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.home-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
 }
