@@ -1,11 +1,25 @@
 import React from "react";
 import "./Login.css";
 import { FaUser, FaLock } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
 const LoginPage = () => {
+  const history = useNavigate();
+
+  // Function to handle login button click
+  const handleLogin = (e) => {
+    e.preventDefault();
+    history("/");
+  };
+
+  // Function to handle register link click
+  const handleRegister = () => {
+    // Redirect to signup page
+    history("/signup");
+  };
+
   return (
     <div className="wrapper">
-      <form action="">
+      <form onSubmit={handleLogin}>
         <h1>Login</h1>
         <div className="input-box">
           <input type="text" placeholder="Enter Username" required />
@@ -25,7 +39,10 @@ const LoginPage = () => {
         <button type="submit">Login</button>
         <div className="register-link">
           <p>
-            Don't have an account?<a href="#">Register</a>
+            Don't have an account?
+            <a href="#" onClick={handleRegister}>
+              Register
+            </a>{" "}
           </p>
         </div>
       </form>

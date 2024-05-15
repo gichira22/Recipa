@@ -10,28 +10,63 @@ const SignUp = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const history = useNavigate();
+
   // Error handling function
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
     setShowConfirmPassword(true);
   };
 
+  // Validation function for username
+  const validateUsername = (input) => {
+    const regex = /^[a-zA-Z0-9_]{3,16}$/;
+    return regex.test(input);
+  };
+
+  // Validation function for email
+  const validateEmail = (input) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(input);
+  };
+
+  // Validation function for password
+  const validatePassword = (input) => {
+    const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+    return regex.test(input);
+  };
+
   const handleSignup = (e) => {
     e.preventDefault();
-
-    if (password === confirmPassword) {
-      console.log("Signup successful!");
-
-      history("/");
-    } else {
-      // Display error message for unmatching passwords
-      console.log("Passwords don't match");
+    console.log("Signup button clicked");
+    // Perform input validation
+    if (!validateUsername(username)) {
+      console.log("Invalid username");
+      return;
     }
+
+    if (!validateEmail(email)) {
+      console.log("Invalid email");
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      console.log("Invalid password");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      console.log("Passwords don't match");
+      return;
+    }
+
+    // Redirect to home page if signup is successful
+    console.log("Signup successful!");
+    history("/");
   };
 
   return (
     <div className="wrapper">
-      <form onSubmit={handleSignup}>
+      <form action="">
         <h1>Signup</h1>
         <div className="input-box">
           <input
