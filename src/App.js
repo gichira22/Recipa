@@ -10,6 +10,7 @@ import Contacts from "./components/Contacts";
 import LoginForm from "./components/LoginPage";
 import SignUp from "./components/SignUp";
 import Footer from "./components/Footer";
+import Search from "./components/Search";
 import { CartProvider } from "./components/ShoppingCart";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contacts />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
         <Footer />
       </CartProvider>

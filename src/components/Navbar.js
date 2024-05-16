@@ -26,6 +26,9 @@ const Navbar = () => {
       <Link to="/feedback" className="navbar-link">
         Feedback
       </Link>
+      <Link to="/search" className="navbar">
+        Search
+      </Link>
     </div>
   );
 };
