@@ -37,7 +37,7 @@ const SignUp = () => {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    console.log("Signup button clicked");
+    history("/");
     // Perform input validation
     if (!validateUsername(username)) {
       console.log("Invalid username");
@@ -58,15 +58,13 @@ const SignUp = () => {
       console.log("Passwords don't match");
       return;
     }
-
-    // Redirect to home page if signup is successful
-    console.log("Signup successful!");
-    history("/");
   };
-
+  const handleLogin = () => {
+    history("/login");
+  };
   return (
     <div className="wrapper">
-      <form action="">
+      <form onSubmit={handleSignup}>
         <h1>Signup</h1>
         <div className="input-box">
           <input
@@ -113,7 +111,10 @@ const SignUp = () => {
         <button type="submit">Signup</button>
         <div className="register-link">
           <p>
-            Already have an account? <a href="#">Login</a>
+            Already have an account?{" "}
+            <a href="#" onClick={handleLogin}>
+              Login
+            </a>
           </p>
         </div>
       </form>

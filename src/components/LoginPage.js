@@ -11,9 +11,8 @@ const LoginPage = () => {
     history("/");
   };
 
-  // Function to handle register link click
+  // Redirect to signup page function
   const handleRegister = () => {
-    // Redirect to signup page
     history("/signup");
   };
 
